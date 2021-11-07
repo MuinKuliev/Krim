@@ -20,6 +20,7 @@ $main_color :#87CE66;
 
 html {
     scroll-behavior: smooth;
+    overflow-x     : hidden;
 }
 
 body {
@@ -232,6 +233,16 @@ a {
 .about_inner {
     display        : flex;
     justify-content: space-between;
+    align-items: center;
+    margin-top: 68px;
+    & .about_title{
+        font-size: 32px;
+    }
+    &>.about_title{
+        font-size: 40px;
+        text-align: center;
+        margin-left: 100px;
+    }
 }
 
 .about__content {
@@ -299,7 +310,8 @@ a {
     }
 }
 
-.slider,.photo_slider {
+.slider,
+.photo_slider {
     position: relative;
 }
 
@@ -340,11 +352,11 @@ a {
     }
 
     &-prev {
-        left: 0;
+        left: -5%;
     }
 
     &-next {
-        right: 0;
+        right: -5%;
     }
 
     &-dots {
@@ -380,14 +392,13 @@ a {
 }
 
 .history {
-    padding            : 87px;
-    background         : url('../images/Ellipse.png')no-repeat top/cover, url('../images/Памятник_Погибшим_кораблям-removebg-preview\ 1.png') no-repeat;
-    background-position: 0 200px, right top;
-    background-size    : 100%, auto;
-}
+    padding: 87px;
+    background: url('../images/way.svg') no-repeat 70% bottom /auto 88%,
+        url('../images/Ellipse.png')no-repeat 100% /100% 100%,
+        url('../images/Памятник_Погибшим_кораблям-removebg-preview\ 1.png') no-repeat top right;
 
-.history_inner {
-    background: url('../images/way.svg') no-repeat 80% 200px;
+    // background-position: 0 200px, right top;
+    // background-size    : 100%, auto;
 }
 
 .history_title {
@@ -434,17 +445,23 @@ a {
 }
 
 .history_card {
-    position : relative;
-    transform: rotate(7deg);
+    position: relative;
+
 
     &::before {
         position: absolute;
         z-index : -15;
     }
 
+    &_content {
+        transform: rotate(7deg);
+    }
+
     &:nth-child(odd) {
         margin-left: auto;
-        transform  : rotate(-7deg);
+        .history_card_content{
+            transform: rotate(-7deg);
+        }
     }
 }
 
@@ -624,6 +641,7 @@ a {
 .cards {
     display        : flex;
     justify-content: space-between;
+    flex-wrap      : wrap;
     margin-top     : 62px;
 }
 
@@ -690,11 +708,12 @@ a {
 
 .photo_slide {
     .slider__item {
-        text-align: center;
+        text-align      : center;
         border-radius   : 20px;
         background-color: #fff;
         box-shadow      : 2px 2px 10px rgba(0, 0, 0, 0.2);
-       pointer-events: none;
+        pointer-events  : none;
+
         img {
             max-width : 1160px;
             max-height: 625px;
