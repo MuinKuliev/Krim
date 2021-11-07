@@ -1,0 +1,15 @@
+/* Slider */
+
+.slick-slider {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+
