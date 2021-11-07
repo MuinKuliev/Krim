@@ -17,6 +17,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -265,6 +266,20 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 68px;
+}
+
+.about_inner .about_title {
+  font-size: 32px;
+}
+
+.about_inner > .about_title {
+  font-size: 40px;
+  text-align: center;
+  margin-left: 100px;
 }
 
 .about__content {
@@ -341,7 +356,8 @@ a {
   margin: 0 52px 0 32px;
 }
 
-.slider, .photo_slider {
+.slider,
+.photo_slider {
   position: relative;
 }
 
@@ -389,11 +405,11 @@ a {
 }
 
 .slick-prev {
-  left: 0;
+  left: -5%;
 }
 
 .slick-next {
-  right: 0;
+  right: -5%;
 }
 
 .slick-dots {
@@ -433,13 +449,7 @@ a {
 
 .history {
   padding: 87px;
-  background: url("../images/Ellipse.png") no-repeat top/cover, url("../images/Памятник_Погибшим_кораблям-removebg-preview 1.png") no-repeat;
-  background-position: 0 200px, right top;
-  background-size: 100%, auto;
-}
-
-.history_inner {
-  background: url("../images/way.svg") no-repeat 80% 200px;
+  background: url("../images/way.svg") no-repeat 70% bottom/auto 88%, url("../images/Ellipse.png") no-repeat 100%/100% 100%, url("../images/Памятник_Погибшим_кораблям-removebg-preview 1.png") no-repeat top right;
 }
 
 .history_title {
@@ -484,8 +494,6 @@ a {
 
 .history_card {
   position: relative;
-  -webkit-transform: rotate(7deg);
-          transform: rotate(7deg);
 }
 
 .history_card::before {
@@ -493,8 +501,16 @@ a {
   z-index: -15;
 }
 
+.history_card_content {
+  -webkit-transform: rotate(7deg);
+          transform: rotate(7deg);
+}
+
 .history_card:nth-child(odd) {
   margin-left: auto;
+}
+
+.history_card:nth-child(odd) .history_card_content {
   -webkit-transform: rotate(-7deg);
           transform: rotate(-7deg);
 }
@@ -693,6 +709,8 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 62px;
 }
 
