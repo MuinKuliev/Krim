@@ -1,15 +1,65 @@
 /* Slider */
-
-.slick-slider {
+.slick-list {
+  position: relative;
   overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
 }
 
 .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
 }
 
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
 
+.slick-track:after {
+  clear: both;
+}
 
+.slick-loading .slick-track {
+  visibility: hidden;
+}
 
+.slick-slide {
+  margin-left: 50px;
+}
 
+.slick-arrow {
+  font-size: 0;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: url("../../images/icon/arrow-down-sign-to-navigate.png");
+  cursor: pointer;
+}
+
+.slick-arrow .slick-hidden {
+  display: none;
+}
+
+.slick-prev {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.history .slick-prev {
+  background: url("../../images/icon/arrow-prevsign-to-navigate.png");
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+/*# sourceMappingURL=slick.css.map */
