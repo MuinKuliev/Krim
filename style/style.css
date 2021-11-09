@@ -67,6 +67,7 @@ a {
           align-items: flex-end;
   width: 50px;
   height: 40px;
+  cursor: pointer;
 }
 
 .header_burger::before, .header_burger::after {
@@ -451,8 +452,8 @@ a {
 
 .slider_item_inner img {
   display: inline-block;
-  height: 290px;
-  width: 420px;
+  max-height: 290px;
+  max-width: 420px;
   margin-right: -40%;
 }
 
