@@ -12,6 +12,19 @@
   }
 }
 
+@media screen and (max-width: 1050px) {
+  .slider_item_inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin: 0 200px;
+  }
+  .slider_item_inner img {
+    margin: 0;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .header_inner {
     -webkit-box-align: center;
@@ -75,6 +88,36 @@
     display: -ms-flexbox;
     display: flex;
   }
+  .slick-arrow {
+    top: auto;
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    bottom: 40px;
+    background: url("../images/icon/arrow-prevsign-to-navigate.png") no-repeat center, linear-gradient(135.92deg, #87CE66 6.99%, #63AB41 96.73%);
+  }
+  .slick-prev {
+    left: 0;
+  }
+  .history .slick-prev, .slick-prev {
+    left: 100px;
+    background: url("../images/icon/arrow-prevsign-to-navigate.png") no-repeat center, linear-gradient(135.92deg, #87CE66 6.99%, #63AB41 96.73%);
+  }
+  .slick-prev {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  .slick-next {
+    right: 0;
+  }
+  .history .slick-next, .slick-next {
+    left: 160px;
+  }
+  .slick-dots {
+    margin-top: 50px;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -84,7 +127,7 @@
             justify-content: center;
   }
   .history_card {
-    margin-top: 10px;
+    margin-top: 100px;
   }
   .history_card_content {
     -webkit-transform: rotate(1deg);
@@ -96,13 +139,29 @@
   }
   .footer_inner {
     display: block;
-    margin: 10px 10px;
+    margin: 10px 10px -15px;
   }
   .footer_inner .menu_list {
     display: block;
   }
   .footer_inner .menu_list .menu_item {
     margin: 10px 0;
+  }
+  .about__content {
+    width: 80%;
+  }
+  .about__content .about_title {
+    text-align: center;
+  }
+  .history {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about__content {
+    width: auto;
   }
 }
 /*# sourceMappingURL=media_style.css.map */

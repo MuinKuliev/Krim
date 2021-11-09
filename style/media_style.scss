@@ -13,6 +13,19 @@
     }
 }
 
+@media screen and (max-width:1050px) {
+
+    .slider_item_inner {
+        flex-direction: column-reverse;
+        margin        : 0 200px;
+
+        img {
+            margin: 0;
+        }
+    }
+
+}
+
 @media screen and (max-width:1000px) {
     .header_inner {
         align-items: center;
@@ -65,9 +78,9 @@
             background-color: #fff;
 
             .menu_list {
-                flex-direction: column;
+                flex-direction : column;
                 justify-content: space-around;
-                gap: 15px;
+                gap            : 15px;
             }
         }
     }
@@ -76,6 +89,40 @@
         display: flex;
     }
 
+    .slick {
+        &-arrow {
+            top          : auto;
+            width        : 60px;
+            height       : 60px;
+            border-radius: 15px;
+            transform    : rotate(180deg);
+            bottom       : 40px;
+            background   : url('../images/icon/arrow-prevsign-to-navigate.png') no-repeat center, linear-gradient(135.92deg, #87CE66 6.99%, #63AB41 96.73%);
+        }
+
+        &-prev {
+            left: 0;
+
+            .history &,&{
+                left      : 100px;
+                background: url('../images/icon/arrow-prevsign-to-navigate.png') no-repeat center, linear-gradient(135.92deg, #87CE66 6.99%, #63AB41 96.73%);
+            }
+            &{
+                transform: rotate(0deg);
+            }
+        }
+
+        &-next {
+            right: 0;
+
+            .history &,& {
+                left: 160px;
+            }
+        }
+        &-dots{
+            margin-top: 50px;
+        }
+    }
 
 }
 
@@ -90,7 +137,7 @@
     }
 
     .history_card {
-        margin-top: 10px;
+        margin-top: 100px;
 
         &_content {
             transform: rotate(1deg);
@@ -107,7 +154,7 @@
 
     .footer_inner {
         display: block;
-        margin : 10px 10px;
+        margin : 10px 10px -15px;
 
         .menu_list {
             display: block;
@@ -117,4 +164,27 @@
             }
         }
     }
+
+    .about__content {
+        width: 80%;
+
+        .about_title {
+            text-align: center;
+        }
+    }
+
+    .history {
+        padding-left : 40px;
+        padding-right: 40px;
+    }
+
+
+}
+
+@media screen and (max-width:600px) {
+
+    .about__content {
+        width: auto;
+    }
+
 }
