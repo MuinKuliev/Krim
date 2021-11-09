@@ -1,27 +1,17 @@
 /* Slider */
 
-// .slick-slider {}
+// .slick-slider {
+//     overflow-y: hidden;
+// }
 
 .slick-list {
-    position: relative;
     overflow: hidden;
-    display : block;
-    margin  : 0;
-    padding : 0;
-
-    &:focus {
-        outline: none;
-    }
-
-    &.dragging {
-        cursor: pointer;
-        cursor: hand;
-    }
 }
 
 .slick-track {
     display: flex;
-
+    justify-content: space-between;
+    // gap: 0 20px;
     &:before,
     &:after {
         content: "";
@@ -38,7 +28,8 @@
 }
 
 .slick-slide {
-    margin-left: 50px;
+    margin: 10px 100px;
+    width: 100%;
 }
 
 .slick-arrow {
@@ -46,17 +37,18 @@
     width: 36px;
     height: 36px;
     border: none;
-    background: url('../../images/icon/arrow-down-sign-to-navigate.png');
+    background: url('../../images/icon/arrow-down-sign-to-navigate.png') no-repeat center;
     cursor: pointer;
- 
     .slick-hidden {
         display: none;
     }
 }
 .slick-prev{
     transform: rotate(180deg);  
+    position: absolute;
+    bottom: 0;
      .history &{
-        background: url('../../images/icon/arrow-prevsign-to-navigate.png');
+        background: url('../../images/icon/arrow-prevsign-to-navigate.png') no-repeat center;
         transform: rotate(0);
     }
 }
