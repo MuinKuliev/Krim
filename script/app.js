@@ -9,7 +9,7 @@ $(document).ready(function() {
 
     $('.photo_slider').slick({
         dots: true,
-        arrows:true,
+        arrows:false,
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -24,10 +24,9 @@ $(document).ready(function() {
 
 
 
-    $('.burger').on('click', function() {
-        $('.menu').toggleClass('show__menu');
-        $('.burger').toggleClass('activ');
+    $('.header_burger').on('click', function() {
+        $('.menu').slideToggle(1000);
+        $('.header_burger').toggleClass('burger_active');
     });
-
 
 });
