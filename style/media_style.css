@@ -1,0 +1,91 @@
+@media screen and (max-width: 1000px) {
+  .header_inner {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .info_inner .info_content {
+    position: relative;
+    top: -200px;
+    display: block;
+  }
+  .info_inner .info_content .info_cards {
+    margin: 130px auto -200px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .about_inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about_inner .about_title {
+    margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .header_inner {
+    margin: 0 20px;
+    position: relative;
+  }
+  .header_burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .menu {
+    display: none;
+  }
+  .show_menu {
+    position: absolute;
+    top: 70px;
+    right: -30px;
+    left: -30px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 30px;
+    -webkit-box-shadow: 2px 12px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 2px 12px 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    background-color: #fff;
+  }
+  .show_menu .menu_list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .info_inner .info_content .info_cards {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .history_card {
+    margin-top: 10px;
+  }
+  .history_card_content {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+  }
+  .history_card:nth-child(odd) .history_card_content {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
+  .footer_inner {
+    display: block;
+    margin: 10px 10px;
+  }
+  .footer_inner .menu_list {
+    display: block;
+  }
+  .footer_inner .menu_list .menu_item {
+    margin: 10px 0;
+  }
+}
+/*# sourceMappingURL=media_style.css.map */
