@@ -50,6 +50,57 @@ a {
     align-items    : end;
 }
 
+.header_burger {
+    display        : none;
+    flex-direction : column;
+    justify-content: space-between;
+    align-items    : flex-end;
+    width          : 50px;
+    height         : 40px;
+
+    &::before,
+    &::after {
+        content: '';
+        display: inline-block;
+        height : 7px;
+        transition: .5s;
+    }
+
+    &::before {
+        width           : 100%;
+        background-color: #323232;
+    }
+
+    &::after {
+        width           : 30%;
+        background-color: #323232;
+    }
+
+    span {
+        display         : inline-block;
+        width           : 70%;
+        height          : 7px;
+        background-color: $main_color;
+        transition: .5s;
+    }
+}
+
+.burger_active {
+    &::before {
+        transform-origin: top right;
+        transform       : rotate(-45deg);
+    }
+    &::after{
+        width: 100%;
+        transform-origin: bottom right;
+        transform: rotate(45deg);
+    }
+    span{
+        width: 0;
+    }
+}
+
+
 .menu_list {
     display    : flex;
     gap        : 45px;
@@ -233,14 +284,16 @@ a {
 .about_inner {
     display        : flex;
     justify-content: space-between;
-    align-items: center;
-    margin-top: 68px;
-    & .about_title{
+    align-items    : center;
+    margin-top     : 68px;
+
+    & .about_title {
         font-size: 32px;
     }
-    &>.about_title{
-        font-size: 40px;
-        text-align: center;
+
+    &>.about_title {
+        font-size  : 40px;
+        text-align : center;
         margin-left: 100px;
     }
 }
@@ -459,7 +512,8 @@ a {
 
     &:nth-child(odd) {
         margin-left: auto;
-        .history_card_content{
+
+        .history_card_content {
             transform: rotate(-7deg);
         }
     }
@@ -713,10 +767,11 @@ a {
         background-color: #fff;
         box-shadow      : 2px 2px 10px rgba(0, 0, 0, 0.2);
         pointer-events  : none;
+        max-width       : 1160px;
+        max-height      : 625px;
 
         img {
-            max-width : 1160px;
-            max-height: 625px;
+            width     : 90%;
             object-fit: cover;
         }
     }
@@ -747,3 +802,10 @@ a {
         padding        : 37px 0;
     }
 }
+
+
+//////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+/////////////////////Media Style////////////////////
+///////////////////////////////////////////////////
+//////////////////////////////////////////////////
