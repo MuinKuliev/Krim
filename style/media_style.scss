@@ -92,6 +92,11 @@
             }
         }
     }
+    .photo_slide{
+        .slick-slide{
+            margin:0;
+        }
+    }
 
     .header_burger {
         display: flex;
@@ -132,7 +137,8 @@
         }
 
         &-dots {
-            margin-top: 50px;
+            margin-left: 0;
+            justify-content: center;
         }
     }
 
@@ -209,7 +215,7 @@
     }
 
     .slider_item_inner {
-        padding:40px 20px;
+        padding: 40px 20px;
 
         img {
             width: 400px;
@@ -219,7 +225,7 @@
 
 @media screen and (max-width:500px) {
 
-    .slider_item_inner{
+    .slider_item_inner {
         img {
             max-width: 300px;
         }

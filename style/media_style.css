@@ -92,6 +92,9 @@
         justify-content: space-around;
     gap: 15px;
   }
+  .photo_slide .slick-slide {
+    margin: 0;
+  }
   .header_burger {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -125,7 +128,10 @@
     left: 160px;
   }
   .slick-dots {
-    margin-top: 50px;
+    margin-left: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
