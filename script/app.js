@@ -22,22 +22,32 @@ $(document).ready(function () {
 
 
 
+    const scrollToggle = () => {
+        if ($('html').css('overflow-y') == 'scroll') {
+            $('html').css({ 'overflow-y': 'hidden' })
+        } else {
+            $('html').css({ 'overflow-y': 'scroll' })
+        }
+    };
 
     const offMenu = () => {
-        $('.menu').slideUp(1000);
-        $('.header_burger').removeClass('burger_active');
+        $('.header_inner .menu').slideUp(1000, scrollToggle);
+        $('.header_inner .header_burger').removeClass('burger_active');
+
         $('body').off('click', offMenu);
+
     };
-    $('.header_burger').on('click', function (e) {
-        $('.menu').slideToggle(1000);
-        $('.header_burger').toggleClass('burger_active');
+    $('.header_inner .header_burger').on('click', function (e) {
+        $('.header_inner .menu').slideToggle(1000, scrollToggle);
+        $('.header_inner .header_burger').toggleClass('burger_active');
+
         $('body').on('click', offMenu);
         e.stopPropagation();
     });
-    $('.menu').on('click', ev => {
+    $('.header_inner .menu').on('click', ev => {
         ev.stopPropagation();
     });
-    $('.menu_item a').on('click', () => {
+    $('.header_inner .menu_item a').on('click', () => {
         offMenu();
     });
 
