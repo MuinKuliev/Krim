@@ -17,6 +17,12 @@ $(document).ready(function () {
         fade: true
     });
 
+
+    const scrollHidden = () => {
+        showMenu();
+        $('body').off('click', scrollHidden);
+    }
+
     const showMenu = () => {
         $('.header_inner .menu').slideToggle(1000);
         $('.header_burger').toggleClass('burger_active');
@@ -25,11 +31,13 @@ $(document).ready(function () {
         } else {
             $('html').css('overflow-y', 'scroll')
         }
+
+        $('body').on('click',scrollHidden);
     };
 
 
     $('.header_burger').on('click', showMenu);
-    $('body').on('click', showMenu);
+
     $('header').on('click', (ev) => ev.stopPropagation());
     $('.header_inner .menu_item').on('click', () => {
         if ($('body').width() < 750) showMenu()
