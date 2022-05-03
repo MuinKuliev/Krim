@@ -570,12 +570,12 @@ a {
 
 .history_card::before {
   position: absolute;
-  z-index: -15;
 }
 
 .history_card_content {
   -webkit-transform: rotate(7deg);
           transform: rotate(7deg);
+  z-index: 5;
 }
 
 .history_card:nth-child(odd) {
