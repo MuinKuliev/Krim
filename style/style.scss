@@ -515,11 +515,11 @@ a {
 
     &::before {
         position: absolute;
-        z-index : -15;
     }
 
     &_content {
         transform: rotate(7deg);
+        z-index: 5;
     }
 
     &:nth-child(odd) {
